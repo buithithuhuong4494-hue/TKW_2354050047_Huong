@@ -1,91 +1,168 @@
-<header>
-    <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5" aria-label="Điều hướng chính">
-        <a href="#" class="font-display text-xl font-bold text-ink">
-            TripMate
-        </a>
+<!DOCTYPE html>
+<html lang="vi">
 
-        <ul class="hidden items-center gap-8 lg:flex">
-            <li><a href="#tinh-nang-title">Tính năng</a></li>
-            <li><a href="#bang-gia-title">Bảng giá</a></li>
-            <li><a href="#faq-title">FAQ</a></li>
-        </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <a href="#" class="btn btn-primary">
-            Bắt đầu
-        </a>
-        <link rel="stylesheet" href="./dist/output.css">
-    </nav>
-</header>
+    <title>TripMate</title>
 
-<main id="main">
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
 
-    <section class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
-        <div>
-            <h1 id="hero-title" class="font-display text-6xl font-black leading-none text-ink">
-                Lên kế hoạch cho chuyến đi dễ dàng hơn
-            </h1>
+<body class="bg-surface font-body text-ink">
 
-            <p class="mt-6 font-body text-xl leading-relaxed text-muted">
-                Lập lịch trình, lưu địa điểm và quản lý chuyến đi trong một nơi.
-            </p>
+    <a href="#main">
+        Bỏ qua đến nội dung chính
+    </a>
 
-            <a href="#" class="btn btn-primary mt-8">
+    <header>
+        <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5" aria-label="Điều hướng chính">
+            <a href="#" class="font-display text-xl font-bold text-ink">
+                TripMate
+            </a>
+
+            <ul class="hidden items-center gap-8 lg:flex">
+                <li>
+                    <a href="#tinh-nang-title" class="text-ink">
+                        Tính năng
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#bang-gia-title" class="text-ink">
+                        Bảng giá
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#faq-title" class="text-ink">
+                        FAQ
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#" class="btn btn-primary">
                 Bắt đầu
             </a>
-        </div>
+        </nav>
+    </header>
 
-        <div>
-            <img src="./assets/img/hero-travel.svg" alt="Minh họa lập kế hoạch chuyến đi">
-        </div>
-    </section>
 
-    <section aria-labelledby="doi-tac-title">
-        <h2 id="doi-tac-title">Đối tác du lịch</h2>
-    </section>
+    <main id="main">
 
-    <section aria-labelledby="tinh-nang-title">
-        <h2 id="tinh-nang-title">Tính năng nổi bật</h2>
+        <!-- HERO -->
+        <section class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
+            <div>
+                <h1 id="hero-title" class="font-display text-6xl font-black leading-none text-ink">
+                    Để chuyến đi trở nên dễ dàng hơn
+                </h1>
 
-        <ul>
-            <li>
-                <h3>Lập lịch trình</h3>
-                <p>Sắp xếp các địa điểm và hoạt động theo từng ngày.</p>
-            </li>
+                <p class="mt-6 font-body text-xl leading-relaxed text-muted">
+                    Lập lịch trình, lưu địa điểm và quản lý chuyến đi trong một nơi.
+                </p>
 
-            <li>
-                <h3>Lưu địa điểm</h3>
-                <p>Lưu những nơi bạn muốn ghé thăm trong chuyến đi.</p>
-            </li>
+                <div class="mt-8 flex items-center gap-4">
+                    <a href="#" class="btn btn-primary">
+                        Bắt đầu
+                    </a>
 
-            <li>
-                <h3>Quản lý chi phí</h3>
-                <p>Theo dõi các khoản chi trong suốt hành trình.</p>
-            </li>
-        </ul>
-    </section>
+                    <a href="#tinh-nang-title" class="btn border border-line bg-white text-ink">
+                        Xem tính năng
+                    </a>
+                </div>
+            </div>
 
-    <section aria-labelledby="so-lieu-title">
-        <h2 id="so-lieu-title">Những con số nổi bật</h2>
-    </section>
+            <div class="flex items-center justify-center lg:justify-end">
+                <img class="h-full w-full rounded-card object-cover" src="./assets/img/Anh.jpg"
+                    alt="Minh họa lập kế hoạch chuyến đi">
+            </div>
+        </section>
 
-    <section aria-labelledby="cam-nhan-title">
-        <h2 id="cam-nhan-title">Người dùng nói gì</h2>
-    </section>
 
-    <section aria-labelledby="bang-gia-title">
-        <h2 id="bang-gia-title">Các gói sử dụng</h2>
-    </section>
+        <!-- ĐỐI TÁC -->
+        <section aria-labelledby="doi
+        
+        tac-title">
+            <h2 id="doi-tac-title">Đối tác du lịch</h2>
+        </section>
 
-    <section aria-labelledby="faq-title">
-        <h2 id="faq-title">Câu hỏi thường gặp</h2>
-    </section>
 
-    <section aria-labelledby="cta-title">
-        <h2 id="cta-title">Bắt đầu lên kế hoạch cho chuyến đi</h2>
-    </section>
+        <!-- TÍNH NĂNG -->
+        <section aria-labelledby="tinh-nang-title">
+            <h2 id="tinh-nang-title">Tính năng nổi bật</h2>
 
-</main>
+            <ul>
+                <li>
+                    <h3>Lập lịch trình</h3>
+                    <p>
+                        Sắp xếp các địa điểm và hoạt động theo từng ngày.
+                    </p>
+                </li>
 
-<footer>
-    <!-- Footer -->
-</footer>
+                <li>
+                    <h3>Lưu địa điểm</h3>
+                    <p>
+                        Lưu những nơi bạn muốn ghé thăm trong chuyến đi.
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Quản lý chi phí</h3>
+                    <p>
+                        Theo dõi các khoản chi trong suốt hành trình.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- SỐ LIỆU -->
+        <section aria-labelledby="so-lieu-title">
+            <h2 id="so-lieu-title">
+                Những con số nổi bật
+            </h2>
+        </section>
+
+
+        <!-- CẢM NHẬN -->
+        <section aria-labelledby="cam-nhan-title">
+            <h2 id="cam-nhan-title">
+                Người dùng nói gì
+            </h2>
+        </section>
+
+
+        <!-- BẢNG GIÁ -->
+        <section aria-labelledby="bang-gia-title">
+            <h2 id="bang-gia-title">
+                Các gói sử dụng
+            </h2>
+        </section>
+
+
+        <!-- FAQ -->
+        <section aria-labelledby="faq-title">
+            <h2 id="faq-title">
+                Câu hỏi thường gặp
+            </h2>
+        </section>
+
+
+        <!-- CTA -->
+        <section aria-labelledby="cta-title">
+            <h2 id="cta-title">
+                Bắt đầu lên kế hoạch cho chuyến đi
+            </h2>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <!-- Footer -->
+    </footer>
+
+</body>
+
+</html>
