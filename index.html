@@ -70,97 +70,620 @@
                     <a href="#tinh-nang-title" class="btn border border-line bg-white text-ink">
                         Xem tính năng
                     </a>
+
                 </div>
             </div>
 
+
+            <!-- HÌNH ẢNH -->
             <div class="flex items-center justify-center lg:justify-end">
-                <img class="h-full w-full rounded-card object-cover" src="./assets/img/Anh.jpg"
-                    alt="Minh họa lập kế hoạch chuyến đi">
+
+                <div class="rounded-card bg-brand-50 p-3 shadow-md">
+
+                    <img class="h-full w-full rounded-card object-cover" src="./assets/img/Anh.jpg"
+                        alt="Minh họa lập kế hoạch chuyến đi">
+
+                </div>
+
             </div>
         </section>
 
 
         <!-- ĐỐI TÁC -->
-        <section aria-labelledby="doi
-        
-        tac-title">
-            <h2 id="doi-tac-title">Đối tác du lịch</h2>
+        <section class="section" aria-labelledby="doi-tac-title">
+
+            <h2 id="doi-tac-title" class="sr-only">
+                Đối tác du lịch
+            </h2>
+
+            <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+                <li class="font-display text-xl font-semibold text-muted">
+                    Booking
+                </li>
+
+                <li class="font-display text-xl font-semibold text-muted">
+                    Agoda
+                </li>
+
+                <li class="font-display text-xl font-semibold text-muted">
+                    Airbnb
+                </li>
+
+                <li class="font-display text-xl font-semibold text-muted">
+                    Traveloka
+                </li>
+
+                <li class="font-display text-xl font-semibold text-muted">
+                    Tripadvisor
+                </li>
+            </ul>
+
         </section>
 
 
         <!-- TÍNH NĂNG -->
-        <section aria-labelledby="tinh-nang-title">
-            <h2 id="tinh-nang-title">Tính năng nổi bật</h2>
+        <section class="section" aria-labelledby="tinh-nang-title">
 
-            <ul>
-                <li>
-                    <h3>Lập lịch trình</h3>
-                    <p>
+            <div class="flex flex-col gap-4 text-center">
+
+                <h2 id="tinh-nang-title" class="font-display text-4xl font-bold text-ink">
+                    Tính năng nổi bật
+                </h2>
+
+                <p class="font-body text-muted">
+                    Mọi công cụ cần thiết để chuyến đi của bạn được tổ chức dễ dàng hơn.
+                </p>
+
+            </div>
+
+
+            <ul class="grid gap-6 pt-14 sm:grid-cols-2 lg:grid-cols-3">
+
+
+                <!-- TÍNH NĂNG 1 -->
+                <li
+                    class="flex flex-col gap-4 rounded-card border border-line bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+                    <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path d="M8 2v3M16 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+
+                    <h3 class="font-display text-2xl font-semibold text-ink">
+                        Lập lịch trình
+                    </h3>
+
+                    <p class="font-body text-muted">
                         Sắp xếp các địa điểm và hoạt động theo từng ngày.
                     </p>
+
                 </li>
 
-                <li>
-                    <h3>Lưu địa điểm</h3>
-                    <p>
+
+                <!-- TÍNH NĂNG 2 -->
+                <li
+                    class="flex flex-col gap-4 rounded-card border border-line bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+                    <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11Z" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+
+                            <circle cx="12" cy="10" r="2" stroke-width="2" />
+                        </svg>
+                    </span>
+
+                    <h3 class="font-display text-2xl font-semibold text-ink">
+                        Lưu địa điểm
+                    </h3>
+
+                    <p class="font-body text-muted">
                         Lưu những nơi bạn muốn ghé thăm trong chuyến đi.
                     </p>
+
                 </li>
 
-                <li>
-                    <h3>Quản lý chi phí</h3>
-                    <p>
+
+                <!-- TÍNH NĂNG 3 -->
+                <li
+                    class="flex flex-col gap-4 rounded-card border border-line bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+                    <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path d="M3 6h18v12H3z" stroke-width="2" stroke-linejoin="round" />
+
+                            <path d="M16 10h5v4h-5a2 2 0 1 1 0-4Z" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+
+                    <h3 class="font-display text-2xl font-semibold text-ink">
+                        Quản lý chi phí
+                    </h3>
+
+                    <p class="font-body text-muted">
                         Theo dõi các khoản chi trong suốt hành trình.
                     </p>
-                </li>
-            </ul>
-        </section>
 
+                </li>
+
+            </ul>
+
+        </section>
 
         <!-- SỐ LIỆU -->
-        <section aria-labelledby="so-lieu-title">
-            <h2 id="so-lieu-title">
-                Những con số nổi bật
-            </h2>
+        <section class="section" aria-labelledby="so-lieu-title">
+
+            <div class="flex flex-col gap-4 text-center">
+                <h2 id="so-lieu-title" class="font-display text-4xl font-bold text-ink">
+                    Những con số nổi bật
+                </h2>
+
+                <p class="font-body text-muted">
+                    TripMate giúp người dùng quản lý chuyến đi dễ dàng và có tổ chức hơn.
+                </p>
+            </div>
+
+            <dl class="grid gap-8 pt-14 sm:grid-cols-3 sm:divide-x sm:divide-line">
+
+                <div class="flex flex-col text-center">
+                    <dt class="order-2 pt-2 text-sm text-muted">
+                        Chuyến đi đã được lên kế hoạch
+                    </dt>
+
+                    <dd class="font-display text-5xl font-extrabold text-brand-600">
+                        1.200+
+                    </dd>
+                </div>
+
+                <div class="flex flex-col text-center">
+                    <dt class="order-2 pt-2 text-sm text-muted">
+                        Địa điểm đã được lưu
+                    </dt>
+
+                    <dd class="font-display text-5xl font-extrabold text-brand-600">
+                        8.500+
+                    </dd>
+                </div>
+
+                <div class="flex flex-col text-center">
+                    <dt class="order-2 pt-2 text-sm text-muted">
+                        Người dùng hài lòng
+                    </dt>
+
+                    <dd class="font-display text-5xl font-extrabold text-brand-600">
+                        95%
+                    </dd>
+                </div>
+
+            </dl>
+
         </section>
 
+        <!-- CÁCH HOẠT ĐỘNG -->
+        <section class="section" aria-labelledby="cach-hoat-dong-title">
+            <div class="rounded-card bg-brand-50 p-8 lg:p-10">
 
-        <!-- CẢM NHẬN -->
-        <section aria-labelledby="cam-nhan-title">
-            <h2 id="cam-nhan-title">
-                Người dùng nói gì
-            </h2>
+                <div class="flex flex-col gap-4 text-center">
+                    <h2 id="cach-hoat-dong-title" class="font-display text-4xl font-bold text-ink">
+                        Cách TripMate hoạt động
+                    </h2>
+
+                    <p class="font-body text-muted">
+                        Chỉ với ba bước đơn giản, bạn có thể chuẩn bị chuyến đi của mình rõ ràng hơn.
+                    </p>
+                </div>
+
+                <ol class="grid gap-6 pt-14 md:grid-cols-3">
+
+                    <li class="flex flex-col gap-4 rounded-card bg-white p-6 shadow-sm">
+                        <span class="font-display text-4xl font-extrabold text-brand-600">
+                            01
+                        </span>
+
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Tạo chuyến đi
+                        </h3>
+
+                        <p class="text-muted">
+                            Nhập điểm đến, thời gian và những thông tin cơ bản cho chuyến đi.
+                        </p>
+                    </li>
+
+                    <li class="flex flex-col gap-4 rounded-card bg-white p-6 shadow-sm">
+                        <span class="font-display text-4xl font-extrabold text-brand-600">
+                            02
+                        </span>
+
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Lên lịch trình
+                        </h3>
+
+                        <p class="text-muted">
+                            Thêm địa điểm, sắp xếp hoạt động và quản lý chi phí theo từng ngày.
+                        </p>
+                    </li>
+
+                    <li class="flex flex-col gap-4 rounded-card bg-white p-6 shadow-sm">
+                        <span class="font-display text-4xl font-extrabold text-brand-600">
+                            03
+                        </span>
+
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Sẵn sàng khởi hành
+                        </h3>
+
+                        <p class="text-muted">
+                            Xem lại toàn bộ kế hoạch và bắt đầu chuyến đi với mọi thông tin cần thiết.
+                        </p>
+                    </li>
+
+                </ol>
+
+            </div>
         </section>
-
 
         <!-- BẢNG GIÁ -->
-        <section aria-labelledby="bang-gia-title">
-            <h2 id="bang-gia-title">
-                Các gói sử dụng
-            </h2>
+        <section class="section" aria-labelledby="bang-gia-title">
+
+            <div class="flex flex-col gap-4 text-center">
+
+                <h2 id="bang-gia-title" class="font-display text-4xl font-bold text-ink">
+                    Các gói sử dụng
+                </h2>
+
+                <p class="font-body text-muted">
+                    Chọn gói phù hợp với nhu cầu lên kế hoạch cho chuyến đi của bạn.
+                </p>
+
+            </div>
+
+
+            <ul class="grid items-stretch gap-6 pt-14 lg:grid-cols-3">
+
+                <!-- GÓI CƠ BẢN -->
+                <li class="flex h-full flex-col gap-6 rounded-card border border-line bg-white p-8">
+
+                    <div class="flex flex-col gap-2">
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Cơ bản
+                        </h3>
+
+                        <p class="text-muted">
+                            Dành cho những chuyến đi đơn giản.
+                        </p>
+                    </div>
+
+                    <p class="font-display text-4xl font-extrabold text-ink">
+                        Miễn phí
+                    </p>
+
+                    <ul class="flex flex-col gap-3 text-muted">
+                        <li>✓ Lập lịch trình chuyến đi</li>
+                        <li>✓ Lưu tối đa 20 địa điểm</li>
+                        <li>✓ Theo dõi chi phí cơ bản</li>
+                    </ul>
+
+                    <a href="#" class="btn border border-brand-600 text-brand-600 mt-auto">
+                        Chọn gói
+                    </a>
+
+                </li>
+
+
+                <!-- GÓI PHỔ BIẾN -->
+                <li
+                    class="relative flex h-full flex-col gap-6 rounded-card border border-line bg-white p-8 ring-2 ring-brand-600">
+
+                    <span
+                        class="absolute -top-3 left-6 rounded-lg bg-brand-600 px-3 py-1 text-sm font-semibold text-white">
+                        Được chọn nhiều nhất
+                    </span>
+
+                    <div class="flex flex-col gap-2">
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Khám phá
+                        </h3>
+
+                        <p class="text-muted">
+                            Phù hợp với người thường xuyên đi du lịch.
+                        </p>
+                    </div>
+
+                    <p class="font-display text-4xl font-extrabold text-ink">
+                        99.000đ
+                        <span class="text-base font-normal text-muted">
+                            / tháng
+                        </span>
+                    </p>
+
+                    <ul class="flex flex-col gap-3 text-muted">
+                        <li>✓ Không giới hạn chuyến đi</li>
+                        <li>✓ Không giới hạn địa điểm</li>
+                        <li>✓ Quản lý chi phí chi tiết</li>
+                        <li>✓ Chia sẻ lịch trình với bạn bè</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary mt-auto">
+                        Chọn gói
+                    </a>
+
+                </li>
+
+
+                <!-- GÓI NHÓM -->
+                <li class="flex h-full flex-col gap-6 rounded-card border border-line bg-white p-8">
+
+                    <div class="flex flex-col gap-2">
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Nhóm
+                        </h3>
+
+                        <p class="text-muted">
+                            Dành cho nhóm bạn hoặc gia đình.
+                        </p>
+                    </div>
+
+                    <p class="font-display text-4xl font-extrabold text-ink">
+                        199.000đ
+                        <span class="text-base font-normal text-muted">
+                            / tháng
+                        </span>
+                    </p>
+
+                    <ul class="flex flex-col gap-3 text-muted">
+                        <li>✓ Tất cả tính năng gói Khám phá</li>
+                        <li>✓ Lập kế hoạch cùng nhiều thành viên</li>
+                        <li>✓ Phân chia chi phí trong nhóm</li>
+                        <li>✓ Đồng bộ lịch trình</li>
+                        <li>✓ Hỗ trợ ưu tiên</li>
+                    </ul>
+
+                    <a href="#" class="btn border border-brand-600 text-brand-600 mt-auto">
+                        Chọn gói
+                    </a>
+
+                </li>
+
+            </ul>
+
         </section>
 
 
         <!-- FAQ -->
-        <section aria-labelledby="faq-title">
-            <h2 id="faq-title">
-                Câu hỏi thường gặp
-            </h2>
+        <section class="section" aria-labelledby="faq-title">
+
+            <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+
+                <div class="flex flex-col gap-4">
+
+                    <h2 id="faq-title" class="font-display text-4xl font-bold text-ink">
+                        Câu hỏi thường gặp
+                    </h2>
+
+                    <p class="font-body text-muted">
+                        Một số câu hỏi phổ biến khi sử dụng TripMate.
+                    </p>
+
+                </div>
+
+
+                <div class="flex flex-col gap-6">
+
+                    <article class="flex flex-col gap-2 border-b border-line pb-6">
+                        <h3 class="font-display text-xl font-semibold text-ink">
+                            TripMate có miễn phí không?
+                        </h3>
+
+                        <p class="text-muted">
+                            Có. Bạn có thể sử dụng gói Cơ bản miễn phí để lập lịch trình,
+                            lưu địa điểm và theo dõi chi phí cho chuyến đi.
+                        </p>
+                    </article>
+
+
+                    <article class="flex flex-col gap-2 border-b border-line pb-6">
+                        <h3 class="font-display text-xl font-semibold text-ink">
+                            Tôi có thể sử dụng TripMate trên điện thoại không?
+                        </h3>
+
+                        <p class="text-muted">
+                            Có. TripMate được thiết kế để sử dụng thuận tiện trên máy tính,
+                            máy tính bảng và điện thoại.
+                        </p>
+                    </article>
+
+
+                    <article class="flex flex-col gap-2 border-b border-line pb-6">
+                        <h3 class="font-display text-xl font-semibold text-ink">
+                            Tôi có thể chia sẻ lịch trình cho bạn bè không?
+                        </h3>
+
+                        <p class="text-muted">
+                            Có. Gói Khám phá và gói Nhóm cho phép bạn chia sẻ lịch trình
+                            với những người cùng tham gia chuyến đi.
+                        </p>
+                    </article>
+
+
+                    <article class="flex flex-col gap-2 border-b border-line pb-6">
+                        <h3 class="font-display text-xl font-semibold text-ink">
+                            TripMate có hỗ trợ quản lý chi phí không?
+                        </h3>
+
+                        <p class="text-muted">
+                            Có. Bạn có thể ghi lại và theo dõi các khoản chi trong suốt
+                            hành trình.
+                        </p>
+                    </article>
+
+
+                    <article class="flex flex-col gap-2 border-b border-line pb-6">
+                        <h3 class="font-display text-xl font-semibold text-ink">
+                            Tôi có thể thay đổi gói sử dụng không?
+                        </h3>
+
+                        <p class="text-muted">
+                            Có. Bạn có thể nâng cấp hoặc thay đổi gói sử dụng khi nhu cầu
+                            của mình thay đổi.
+                        </p>
+                    </article>
+
+
+                    <article class="flex flex-col gap-2">
+                        <h3 class="font-display text-xl font-semibold text-ink">
+                            Dữ liệu chuyến đi của tôi có được lưu lại không?
+                        </h3>
+
+                        <p class="text-muted">
+                            Các lịch trình và địa điểm đã lưu sẽ được giữ lại để bạn
+                            có thể tiếp tục quản lý chuyến đi khi quay lại.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
 
-
         <!-- CTA -->
-        <section aria-labelledby="cta-title">
-            <h2 id="cta-title">
-                Bắt đầu lên kế hoạch cho chuyến đi
-            </h2>
+        <section class="section" aria-labelledby="cta-title">
+
+            <div class="flex flex-col items-center gap-6 rounded-card bg-brand-600 p-8 text-center text-white">
+
+                <h2 id="cta-title" class="font-display text-4xl font-bold">
+                    Bắt đầu lên kế hoạch cho chuyến đi
+                </h2>
+
+                <p class="max-w-2xl text-white">
+                    Tạo lịch trình, lưu địa điểm và quản lý mọi thứ cho chuyến đi
+                    tiếp theo của bạn cùng TripMate.
+                </p>
+
+                <a href="#" class="btn bg-white text-brand-600">
+                    Bắt đầu ngay
+                </a>
+
+            </div>
+
         </section>
 
     </main>
 
 
-    <footer>
-        <!-- Footer -->
+    <footer class="border-t border-line bg-brand-50">
+
+        <div class="mx-auto grid w-full max-w-6xl gap-10 px-5 py-20
+               sm:grid-cols-2 lg:grid-cols-4">
+
+            <!-- THƯƠNG HIỆU -->
+            <div class="flex flex-col gap-4">
+
+                <a href="#" class="font-display text-2xl font-bold text-ink">
+                    TripMate
+                </a>
+
+                <p class="text-muted">
+                    Công cụ giúp bạn lập kế hoạch và quản lý chuyến đi
+                    dễ dàng hơn.
+                </p>
+
+            </div>
+
+
+            <!-- SẢN PHẨM -->
+            <nav aria-labelledby="footer-san-pham">
+
+                <div class="flex flex-col gap-4">
+
+                    <h2 id="footer-san-pham" class="font-display font-semibold text-ink">
+                        Sản phẩm
+                    </h2>
+
+                    <ul class="flex flex-col gap-3 text-muted">
+
+                        <li>
+                            <a href="#tinh-nang-title">
+                                Tính năng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#bang-gia-title">
+                                Bảng giá
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#faq-title">
+                                FAQ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+
+            <!-- HỖ TRỢ -->
+            <nav aria-labelledby="footer-ho-tro">
+
+                <div class="flex flex-col gap-4">
+
+                    <h2 id="footer-ho-tro" class="font-display font-semibold text-ink">
+                        Hỗ trợ
+                    </h2>
+
+                    <ul class="flex flex-col gap-3 text-muted">
+
+                        <li>
+                            <a href="#">
+                                Trung tâm trợ giúp
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Điều khoản sử dụng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Chính sách bảo mật
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+
+            <!-- ĐỊA CHỈ -->
+            <div class="flex flex-col gap-4">
+
+                <h2 class="font-display font-semibold text-ink">
+                    Liên hệ
+                </h2>
+
+                <address class="not-italic text-muted">
+                    TP. Hồ Chí Minh, Việt Nam
+                </address>
+
+                <a href="mailto:hello@tripmate.vn" class="text-muted">
+                    hello@tripmate.vn
+                </a>
+
+            </div>
+
+        </div>
+
     </footer>
 
 </body>
