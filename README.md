@@ -11,3 +11,8 @@
 | H1 / H2 / H3 | `60px / 36px / 24px` | — | `text-6xl / text-4xl / text-2xl` |
 | Padding dọc section | `96px` | — | `py-24` |
 | Bo góc thẻ | `8px` | `--radius-card` | `rounded-card` |
+
+## Deploy
+
+Link website:
+https://buithithuhuong4494-hue.github.io/TKW_2354050047_Huong/
