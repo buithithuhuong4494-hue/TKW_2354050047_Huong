@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Liên hệ | TripMate</title>
+
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="page-surface font-body">
+
+    <a href="#main" class="sr-only focus:not-sr-only">
+        Bỏ qua đến nội dung chính
+    </a>
+
+
+    <!-- HEADER -->
+    <header class="line-theme border-b bg-white dark:bg-surface-dark">
+
+        <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5" aria-label="Điều hướng chính">
+
+            <a href="./index.html" class="font-display text-2xl font-bold text-brand-600">
+                TripMate
+            </a>
+
+            <ul class="hidden items-center gap-8 lg:flex">
+
+                <li>
+                    <a href="./index.html#tinh-nang-title"
+                        class="text-secondary transition-colors hover:text-brand-600">
+                        Tính năng
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./pricing.html" class="text-secondary transition-colors hover:text-brand-600">
+                        Bảng giá
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./contact.html" class="font-semibold text-brand-600">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="flex items-center gap-3">
+
+                <div class="hidden sm:block">
+                    <a href="./contact.html" class="btn btn-primary">
+                        Bắt đầu
+                    </a>
+                </div>
+
+                <button type="button" class="line-theme grid h-10 w-10 place-items-center rounded-lg border lg:hidden"
+                    aria-label="Mở menu">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <main id="main">
+
+        <!-- GIỚI THIỆU -->
+        <section class="section" aria-labelledby="contact-title">
+
+            <div class="mx-auto flex max-w-3xl flex-col gap-4 text-center">
+
+                <p class="font-semibold text-brand-600">
+                    LIÊN HỆ
+                </p>
+
+                <h1 id="contact-title" class="text-primary font-display text-4xl font-black sm:text-5xl">
+                    Chúng tôi có thể giúp gì cho bạn?
+                </h1>
+
+                <p class="text-secondary text-lg leading-relaxed">
+                    Gửi thông tin cho TripMate nếu bạn có câu hỏi về tài khoản,
+                    gói sử dụng hoặc cần hỗ trợ trong quá trình lên kế hoạch chuyến đi.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FORM + THÔNG TIN LIÊN HỆ -->
+        <section class="section pt-0" aria-labelledby="gui-lien-he-title">
+
+            <div class="grid gap-12 lg:grid-cols-[1fr_1.5fr]">
+
+                <!-- THÔNG TIN -->
+                <div class="flex flex-col gap-8">
+
+                    <div class="flex flex-col gap-4">
+
+                        <h2 id="gui-lien-he-title" class="text-primary font-display text-3xl font-bold">
+                            Liên hệ TripMate
+                        </h2>
+
+                        <p class="text-secondary">
+                            Bạn có thể liên hệ trực tiếp hoặc gửi biểu mẫu bên cạnh.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card flex flex-col gap-3">
+
+                        <h3 class="text-primary font-display text-xl font-semibold">
+                            Email
+                        </h3>
+
+                        <a href="mailto:hello@tripmate.vn" class="text-secondary hover:text-brand-600">
+                            hello@tripmate.vn
+                        </a>
+
+                    </div>
+
+
+                    <div class="card flex flex-col gap-3">
+
+                        <h3 class="text-primary font-display text-xl font-semibold">
+                            Địa chỉ
+                        </h3>
+
+                        <address class="text-secondary not-italic">
+                            TP. Hồ Chí Minh, Việt Nam
+                        </address>
+
+                    </div>
+
+
+                    <div class="card flex flex-col gap-3">
+
+                        <h3 class="text-primary font-display text-xl font-semibold">
+                            Thời gian hỗ trợ
+                        </h3>
+
+                        <p class="text-secondary">
+                            Thứ Hai – Thứ Sáu, 08:00 – 17:00
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FORM -->
+                <form class="card flex flex-col gap-6 p-6 sm:p-8" action="#" method="post">
+
+                    <!-- 1. HỌ TÊN -->
+                    <div class="flex flex-col gap-2">
+
+                        <label class="field-label" for="ho-ten">
+                            Họ và tên
+                            <span class="text-red-600" aria-hidden="true">*</span>
+                        </label>
+
+                        <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name">
+
+                    </div>
+
+
+
+                    <!-- 2. EMAIL -->
+                    <div class="flex flex-col gap-2">
+
+                        <label class="field-label" for="email">
+                            Email
+                            <span class="text-red-600" aria-hidden="true">*</span>
+                        </label>
+
+                        <input class="field-input" id="email" name="email" type="email" required autocomplete="email"
+                            aria-describedby="email-hint">
+
+                        <p id="email-hint" class="text-secondary text-xs">
+                            Chúng tôi sẽ phản hồi qua địa chỉ email này.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- 3. SỐ ĐIỆN THOẠI -->
+                    <div class="flex flex-col gap-2">
+
+                        <label class="field-label" for="dien-thoai">
+                            Số điện thoại
+                            <span class="text-red-600" aria-hidden="true">*</span>
+                        </label>
+
+                        <input class="field-input" id="dien-thoai" name="dienThoai" type="tel" required
+                            pattern="0[0-9]{9}" autocomplete="tel" inputmode="numeric"
+                            aria-describedby="dien-thoai-hint dien-thoai-error">
+
+                        <p id="dien-thoai-hint" class="text-secondary text-xs">
+                            Chúng tôi gọi qua số này, không nhắn tin quảng cáo.
+                        </p>
+
+                        <p id="dien-thoai-error" class="text-sm text-red-600" role="alert"></p>
+
+                    </div>
+
+
+
+                    <!-- 4. CHỦ ĐỀ -->
+                    <div class="flex flex-col gap-2">
+
+                        <label class="field-label" for="chu-de">
+                            Chủ đề cần hỗ trợ
+                            <span class="text-red-600" aria-hidden="true">*</span>
+                        </label>
+
+                        <select class="field-input" id="chu-de" name="chuDe" required>
+
+                            <option value="">
+                                Chọn chủ đề
+                            </option>
+
+                            <option value="tai-khoan">
+                                Tài khoản
+                            </option>
+
+                            <option value="bang-gia">
+                                Gói sử dụng và thanh toán
+                            </option>
+
+                            <option value="lich-trinh">
+                                Lịch trình chuyến đi
+                            </option>
+
+                            <option value="khac">
+                                Khác
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- 5. NỘI DUNG -->
+                    <div class="flex flex-col gap-2">
+
+                        <label class="field-label" for="noi-dung">
+                            Nội dung
+                            <span class="text-red-600" aria-hidden="true">*</span>
+                        </label>
+
+                        <textarea class="field-input min-h-36 resize-y" id="noi-dung" name="noiDung" required rows="6"
+                            aria-describedby="noi-dung-hint"></textarea>
+
+                        <p id="noi-dung-hint" class="text-secondary text-xs">
+                            Mô tả rõ vấn đề để chúng tôi có thể hỗ trợ bạn nhanh hơn.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- 6. CHECKBOX -->
+                    <div class="flex items-start gap-3">
+
+                        <input id="dong-y" name="dongY" type="checkbox" required class="mt-1 h-4 w-4 accent-brand-600">
+
+                        <label for="dong-y" class="text-secondary text-sm">
+                            Tôi đồng ý để TripMate sử dụng thông tin trên nhằm phản hồi yêu cầu hỗ trợ.
+                            <span class="text-red-600" aria-hidden="true">*</span>
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+                    <button type="submit" class="btn btn-primary w-full sm:w-auto sm:self-start">
+                        Gửi yêu cầu
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SAU KHI GỬI -->
+        <section class="section" aria-labelledby="sau-khi-gui-title">
+
+            <div class="surface-soft line-theme rounded-card border p-8 text-center sm:p-10">
+
+                <h2 id="sau-khi-gui-title" class="text-primary font-display text-3xl font-bold sm:text-4xl">
+                    Sau khi gửi thì sao?
+                </h2>
+
+                <p class="text-secondary mx-auto mt-4 max-w-2xl">
+                    TripMate sẽ xem xét nội dung bạn gửi và phản hồi qua email trong thời gian hỗ trợ.
+                    Nếu cần thêm thông tin, chúng tôi sẽ liên hệ lại qua email hoặc số điện thoại bạn cung cấp.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="surface-soft line-theme border-t">
+
+        <div class="mx-auto grid w-full max-w-6xl gap-10 px-5 py-20
+                   sm:grid-cols-2 lg:grid-cols-4">
+
+            <div class="flex flex-col gap-4">
+
+                <a href="./index.html" class="text-primary font-display text-2xl font-bold">
+                    TripMate
+                </a>
+
+                <p class="text-secondary">
+                    Công cụ giúp bạn lập kế hoạch và quản lý chuyến đi dễ dàng hơn.
+                </p>
+
+            </div>
+
+
+            <nav aria-labelledby="footer-san-pham">
+
+                <div class="flex flex-col gap-4">
+
+                    <h2 id="footer-san-pham" class="text-primary font-display font-semibold">
+                        Sản phẩm
+                    </h2>
+
+                    <ul class="text-secondary flex flex-col gap-3">
+
+                        <li>
+                            <a href="./index.html#tinh-nang-title">
+                                Tính năng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./pricing.html">
+                                Bảng giá
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./index.html#faq-title">
+                                FAQ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+
+            <nav aria-labelledby="footer-ho-tro">
+
+                <div class="flex flex-col gap-4">
+
+                    <h2 id="footer-ho-tro" class="text-primary font-display font-semibold">
+                        Hỗ trợ
+                    </h2>
+
+                    <ul class="text-secondary flex flex-col gap-3">
+
+                        <li>
+                            <a href="./contact.html">
+                                Trung tâm trợ giúp
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Điều khoản sử dụng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Chính sách bảo mật
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+
+            <div class="flex flex-col gap-4">
+
+                <h2 class="text-primary font-display font-semibold">
+                    Liên hệ
+                </h2>
+
+                <address class="text-secondary not-italic">
+                    TP. Hồ Chí Minh, Việt Nam
+                </address>
+
+                <a href="mailto:hello@tripmate.vn" class="text-secondary">
+                    hello@tripmate.vn
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

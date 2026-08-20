@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* BRAND */
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+
+  /* ACCENT */
+  --color-accent-500: #14b8a6;
+
+  /* TEXT */
+  --color-ink: #0f172a;
+  --color-ink-invert: #e8eef8;
+
+  --color-muted: #64748b;
+  --color-muted-invert: #a8b3c7;
+
+  /* SURFACE */
+  --color-surface: #f8fafc;
+  --color-surface-dark: #0f172a;
+  --color-surface-dark-alt: #172033;
+
+  /* BORDER */
+  --color-line: #e2e8f0;
+  --color-line-invert: #334155;
+
+  /* COMMON */
+  --color-white: #ffffff;
+
+  /* FONT */
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* RADIUS */
+  --radius-card: 0.5rem;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.section {
+  @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+}
+
+
+/* =========================
+   COMPONENTS
+========================= */
+
+@layer components {
+
+  /* BUTTON */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700;
+  }
+
+
+  /* CARD */
+  .card {
+    @apply rounded-card border border-line bg-white p-6 text-ink dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert;
+  }
+
+
+  /* PAGE */
+  .page-surface {
+    @apply bg-white text-ink dark:bg-surface-dark dark:text-ink-invert;
+  }
+
+
+  /* SOFT SURFACE */
+  .surface-soft {
+    @apply bg-surface dark:bg-surface-dark-alt;
+  }
+
+
+  /* TEXT */
+  .text-primary {
+    @apply text-ink dark:text-ink-invert;
+  }
+
+  .text-secondary {
+    @apply text-muted dark:text-muted-invert;
+  }
+
+
+  /* BORDER */
+  .line-theme {
+    @apply border-line dark:border-line-invert;
+  }
+
+  .field-label {
+    @apply block text-sm font-semibold text-ink dark:text-ink-invert;
+  }
+
+  .field-input {
+    @apply w-full rounded-lg border border-line bg-white px-4 py-3 text-ink outline-none transition-colors focus:border-brand-600 focus:ring-2 focus:ring-brand-600 dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert;
+  }
+
+  .field-error {
+  @apply text-sm text-red-600;
+}
+
+}
