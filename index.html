@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -10,131 +10,230 @@
     <link rel="stylesheet" href="./dist/output.css">
 </head>
 
-<body class="bg-white font-body text-ink">
 
-    <!-- <a href="#main">
+<body class="page-surface font-body">
+
+    <!-- SKIP LINK -->
+    <a href="#main" class="sr-only focus:not-sr-only">
         Bỏ qua đến nội dung chính
-    </a> -->
+    </a>
 
-    <header class="border-b border-line bg-white">
-        <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5" aria-label="Điều hướng chính">
-            <a href="#" class="font-display text-2xl font-bold text-brand-600">
+
+    <!-- HEADER -->
+    <header class="line-theme border-b bg-white dark:bg-surface-dark">
+
+        <nav
+            class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5"
+            aria-label="Điều hướng chính"
+        >
+
+            <a
+                href="#"
+                class="font-display text-2xl font-bold text-brand-600"
+            >
                 TripMate
             </a>
 
+
+            <!-- MENU DESKTOP -->
             <ul class="hidden items-center gap-8 lg:flex">
+
                 <li>
-                    <a href="#tinh-nang-title" class="text-muted transition-colors hover:text-brand-600">
+                    <a
+                        href="#tinh-nang-title"
+                        class="text-secondary transition-colors hover:text-brand-600"
+                    >
                         Tính năng
                     </a>
                 </li>
 
                 <li>
-                    <a href="#bang-gia-title" class="text-muted transition-colors hover:text-brand-600">
+                    <a
+                        href="#bang-gia-title"
+                        class="text-secondary transition-colors hover:text-brand-600"
+                    >
                         Bảng giá
                     </a>
                 </li>
 
                 <li>
-                    <a href="#faq-title" class="text-muted transition-colors hover:text-brand-600">
+                    <a
+                        href="#faq-title"
+                        class="text-secondary transition-colors hover:text-brand-600"
+                    >
                         FAQ
                     </a>
                 </li>
+
             </ul>
 
-            <a href="#" class="btn btn-primary">
-                Bắt đầu
-            </a>
+
+            <div class="flex items-center gap-3">
+
+                <div class="hidden sm:block">
+                    <a href="#" class="btn btn-primary">
+                        Bắt đầu
+                    </a>
+                </div>
+
+                <button
+                    type="button"
+                    class="line-theme grid h-10 w-10 place-items-center rounded-lg border lg:hidden"
+                    aria-label="Mở menu"
+                >
+                    <svg
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M4 7h16M4 12h16M4 17h16"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+
+            </div>
+
         </nav>
+
     </header>
+
 
 
     <main id="main">
 
-        <!-- HERO -->
-        <section class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
-            <!-- NỘI DUNG -->
-            <div class="flex flex-col gap-6">
 
-                <h1 id="hero-title" class="font-display text-6xl font-black leading-none text-ink">
+        <!-- ===================== -->
+        <!-- HERO -->
+        <!-- ===================== -->
+        <section
+            class="section grid items-center gap-12 lg:grid-cols-2 lg:gap-12"
+            aria-labelledby="hero-title"
+        >
+
+            <!-- NỘI DUNG -->
+            <div class="flex max-w-xl flex-col gap-6">
+
+                <h1
+                    id="hero-title"
+                    class="text-primary max-w-3xl font-display text-4xl font-black leading-tight
+                           sm:text-5xl lg:text-5xl xl:text-6xl"
+                >
                     Để chuyến đi trở nên dễ dàng hơn
                 </h1>
 
-                <p class="font-body text-xl leading-relaxed text-muted">
+
+                <p class="text-secondary font-body text-xl leading-relaxed">
                     Lập lịch trình, lưu địa điểm và quản lý chuyến đi trong một nơi.
                 </p>
 
-                <div class="flex items-center gap-4">
+
+                <div class="flex flex-wrap items-center gap-4">
 
                     <a href="#" class="btn btn-primary">
                         Bắt đầu
                     </a>
 
-                    <a href="#tinh-nang-title" class="btn border border-line bg-white text-ink
-                       hover:border-brand-600 hover:text-brand-600">
+                    <a
+                        href="#tinh-nang-title"
+                        class="btn surface-soft line-theme text-primary border
+                               hover:border-brand-600 hover:text-brand-600"
+                    >
                         Xem tính năng
                     </a>
 
                 </div>
+
             </div>
 
 
             <!-- HÌNH ẢNH -->
             <div class="flex items-center justify-center lg:justify-end">
 
-                <div class="rounded-card bg-surface p-3 shadow-md">
+                <div class="surface-soft line-theme rounded-card border p-3">
 
-                    <img class="h-auto w-full rounded-card object-cover" src="./assets/img/Banner.jpg"
-                        alt="Minh họa lập kế hoạch chuyến đi">
+                    <img
+                        class="h-auto w-full rounded-card object-cover"
+                        src="./assets/img/Banner.jpg"
+                        alt="Minh họa lập kế hoạch chuyến đi"
+                    >
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- ĐỐI TÁC -->
-        <section class="section" aria-labelledby="doi-tac-title">
 
-            <h2 id="doi-tac-title" class="sr-only">
+        <!-- ===================== -->
+        <!-- ĐỐI TÁC -->
+        <!-- ===================== -->
+        <section
+            class="section"
+            aria-labelledby="doi-tac-title"
+        >
+
+            <h2
+                id="doi-tac-title"
+                class="sr-only"
+            >
                 Đối tác du lịch
             </h2>
 
-            <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-                <li class="font-display text-xl font-semibold text-muted">
+
+            <ul
+                class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6"
+            >
+
+                <li class="text-secondary font-display text-xl font-semibold">
                     Booking
                 </li>
 
-                <li class="font-display text-xl font-semibold text-muted">
+                <li class="text-secondary font-display text-xl font-semibold">
                     Agoda
                 </li>
 
-                <li class="font-display text-xl font-semibold text-muted">
+                <li class="text-secondary font-display text-xl font-semibold">
                     Airbnb
                 </li>
 
-                <li class="font-display text-xl font-semibold text-muted">
+                <li class="text-secondary font-display text-xl font-semibold">
                     Traveloka
                 </li>
 
-                <li class="font-display text-xl font-semibold text-muted">
+                <li class="text-secondary font-display text-xl font-semibold">
                     Tripadvisor
                 </li>
+
             </ul>
 
         </section>
 
 
+
+        <!-- ===================== -->
         <!-- TÍNH NĂNG -->
-        <section class="section" aria-labelledby="tinh-nang-title">
+        <!-- ===================== -->
+        <section
+            class="section"
+            aria-labelledby="tinh-nang-title"
+        >
 
             <div class="flex flex-col gap-4 text-center">
 
-                <h2 id="tinh-nang-title" class="font-display text-4xl font-bold text-ink">
+                <h2
+                    id="tinh-nang-title"
+                    class="text-primary font-display text-3xl font-bold sm:text-4xl"
+                >
                     Tính năng nổi bật
                 </h2>
 
-                <p class="font-body text-muted">
+                <p class="text-secondary font-body">
                     Mọi công cụ cần thiết để chuyến đi của bạn được tổ chức dễ dàng hơn.
                 </p>
 
@@ -144,69 +243,140 @@
             <ul class="grid gap-6 pt-14 sm:grid-cols-2 lg:grid-cols-3">
 
 
-                <!-- TÍNH NĂNG 1 -->
+                <!-- FEATURE 1 -->
                 <li
-                    class="flex flex-col gap-4 rounded-card border border-line bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                    class="card flex flex-col gap-4
+                           transition-all duration-200
+                           hover:-translate-y-1"
+                >
 
-                    <span class="grid h-11 w-11 place-items-center rounded-lg bg-surface text-brand-600">
-                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                            <path d="M8 2v3M16 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                    <span
+                        class="surface-soft grid h-11 w-11 place-items-center
+                               rounded-lg text-brand-600"
+                    >
+                        <svg
+                            class="h-6 w-6"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M8 2v3M16 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
                         </svg>
                     </span>
 
-                    <h3 class="font-display text-2xl font-semibold text-ink">
+
+                    <h3
+                        class="text-primary font-display text-2xl font-semibold"
+                    >
                         Lập lịch trình
                     </h3>
 
-                    <p class="font-body text-muted">
+
+                    <p class="text-secondary">
                         Sắp xếp các địa điểm và hoạt động theo từng ngày.
                     </p>
 
                 </li>
 
 
-                <!-- TÍNH NĂNG 2 -->
+
+                <!-- FEATURE 2 -->
                 <li
-                    class="flex flex-col gap-4 rounded-card border border-line bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                    class="card flex flex-col gap-4
+                           transition-all duration-200
+                           hover:-translate-y-1"
+                >
 
-                    <span class="grid h-11 w-11 place-items-center rounded-lg bg-surface text-brand-600">
-                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                            <path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11Z" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                    <span
+                        class="surface-soft grid h-11 w-11 place-items-center
+                               rounded-lg text-brand-600"
+                    >
+                        <svg
+                            class="h-6 w-6"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11Z"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
 
-                            <circle cx="12" cy="10" r="2" stroke-width="2" />
+                            <circle
+                                cx="12"
+                                cy="10"
+                                r="2"
+                                stroke-width="2"
+                            />
                         </svg>
                     </span>
 
-                    <h3 class="font-display text-2xl font-semibold text-ink">
+
+                    <h3
+                        class="text-primary font-display text-2xl font-semibold"
+                    >
                         Lưu địa điểm
                     </h3>
 
-                    <p class="font-body text-muted">
+
+                    <p class="text-secondary">
                         Lưu những nơi bạn muốn ghé thăm trong chuyến đi.
                     </p>
 
                 </li>
 
 
-                <!-- TÍNH NĂNG 3 -->
+
+                <!-- FEATURE 3 -->
                 <li
-                    class="flex flex-col gap-4 rounded-card border border-line bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+                    class="card flex flex-col gap-4
+                           transition-all duration-200
+                           hover:-translate-y-1"
+                >
 
-                    <span class="grid h-11 w-11 place-items-center rounded-lg bg-surface text-brand-600">
-                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                            <path d="M3 6h18v12H3z" stroke-width="2" stroke-linejoin="round" />
+                    <span
+                        class="surface-soft grid h-11 w-11 place-items-center
+                               rounded-lg text-brand-600"
+                    >
+                        <svg
+                            class="h-6 w-6"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M3 6h18v12H3z"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                            />
 
-                            <path d="M16 10h5v4h-5a2 2 0 1 1 0-4Z" stroke-width="2" stroke-linejoin="round" />
+                            <path
+                                d="M16 10h5v4h-5a2 2 0 1 1 0-4Z"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                            />
                         </svg>
                     </span>
 
-                    <h3 class="font-display text-2xl font-semibold text-ink">
+
+                    <h3
+                        class="text-primary font-display text-2xl font-semibold"
+                    >
                         Quản lý chi phí
                     </h3>
 
-                    <p class="font-body text-muted">
+
+                    <p class="text-secondary">
                         Theo dõi các khoản chi trong suốt hành trình.
                     </p>
 
@@ -216,235 +386,388 @@
 
         </section>
 
+
+
+        <!-- ===================== -->
         <!-- SỐ LIỆU -->
-        <section class="section" aria-labelledby="so-lieu-title">
+        <!-- ===================== -->
+        <section
+            class="section"
+            aria-labelledby="so-lieu-title"
+        >
 
             <div class="flex flex-col gap-4 text-center">
-                <h2 id="so-lieu-title" class="font-display text-4xl font-bold text-ink">
+
+                <h2
+                    id="so-lieu-title"
+                    class="text-primary font-display text-3xl font-bold sm:text-4xl"
+                >
                     Những con số nổi bật
                 </h2>
 
-                <p class="font-body text-muted">
+                <p class="text-secondary">
                     TripMate giúp người dùng quản lý chuyến đi dễ dàng và có tổ chức hơn.
                 </p>
+
             </div>
 
-            <dl class="grid gap-8 pt-14 sm:grid-cols-3 sm:divide-x sm:divide-line">
+
+            <dl
+                class="grid gap-8 pt-14
+                       sm:grid-cols-3
+                       sm:divide-x sm:divide-line"
+            >
 
                 <div class="flex flex-col text-center">
-                    <dt class="order-2 pt-2 text-sm text-muted">
+
+                    <dt class="text-secondary order-2 pt-2 text-sm">
                         Chuyến đi đã được lên kế hoạch
                     </dt>
 
-                    <dd class="font-display text-5xl font-extrabold text-brand-600">
+                    <dd
+                        class="font-display text-5xl font-extrabold text-brand-600"
+                    >
                         1.200+
                     </dd>
+
                 </div>
 
+
                 <div class="flex flex-col text-center">
-                    <dt class="order-2 pt-2 text-sm text-muted">
+
+                    <dt class="text-secondary order-2 pt-2 text-sm">
                         Địa điểm đã được lưu
                     </dt>
 
-                    <dd class="font-display text-5xl font-extrabold text-brand-600">
+                    <dd
+                        class="font-display text-5xl font-extrabold text-brand-600"
+                    >
                         8.500+
                     </dd>
+
                 </div>
 
+
                 <div class="flex flex-col text-center">
-                    <dt class="order-2 pt-2 text-sm text-muted">
+
+                    <dt class="text-secondary order-2 pt-2 text-sm">
                         Người dùng hài lòng
                     </dt>
 
-                    <dd class="font-display text-5xl font-extrabold text-brand-600">
+                    <dd
+                        class="font-display text-5xl font-extrabold text-brand-600"
+                    >
                         95%
                     </dd>
+
                 </div>
 
             </dl>
 
         </section>
 
+
+
+        <!-- ===================== -->
         <!-- CÁCH HOẠT ĐỘNG -->
-        <section class="section" aria-labelledby="cach-hoat-dong-title">
-            <div class="rounded-card bg-surface p-8 lg:p-10">
+        <!-- ===================== -->
+        <section
+            class="section"
+            aria-labelledby="cach-hoat-dong-title"
+        >
+
+            <div
+                class="surface-soft line-theme rounded-card border p-8 lg:p-10"
+            >
 
                 <div class="flex flex-col gap-4 text-center">
-                    <h2 id="cach-hoat-dong-title" class="font-display text-4xl font-bold text-ink">
+
+                    <h2
+                        id="cach-hoat-dong-title"
+                        class="text-primary font-display text-3xl font-bold sm:text-4xl"
+                    >
                         Cách TripMate hoạt động
                     </h2>
 
-                    <p class="font-body text-muted">
+                    <p class="text-secondary">
                         Chỉ với ba bước đơn giản, bạn có thể chuẩn bị chuyến đi của mình rõ ràng hơn.
                     </p>
+
                 </div>
+
 
                 <ol class="grid gap-6 pt-14 md:grid-cols-3">
 
-                    <li class="flex flex-col gap-4 rounded-card bg-white p-6 shadow-sm">
-                        <span class="font-display text-4xl font-extrabold text-brand-600">
+
+                    <!-- STEP 1 -->
+                    <li class="card flex flex-col gap-4">
+
+                        <span
+                            class="font-display text-4xl font-extrabold text-brand-600"
+                        >
                             01
                         </span>
 
-                        <h3 class="font-display text-2xl font-semibold text-ink">
+                        <h3
+                            class="text-primary font-display text-2xl font-semibold"
+                        >
                             Tạo chuyến đi
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Nhập điểm đến, thời gian và những thông tin cơ bản cho chuyến đi.
                         </p>
+
                     </li>
 
-                    <li class="flex flex-col gap-4 rounded-card bg-white p-6 shadow-sm">
-                        <span class="font-display text-4xl font-extrabold text-brand-600">
+
+                    <!-- STEP 2 -->
+                    <li class="card flex flex-col gap-4">
+
+                        <span
+                            class="font-display text-4xl font-extrabold text-brand-600"
+                        >
                             02
                         </span>
 
-                        <h3 class="font-display text-2xl font-semibold text-ink">
+                        <h3
+                            class="text-primary font-display text-2xl font-semibold"
+                        >
                             Lên lịch trình
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Thêm địa điểm, sắp xếp hoạt động và quản lý chi phí theo từng ngày.
                         </p>
+
                     </li>
 
-                    <li class="flex flex-col gap-4 rounded-card bg-white p-6 shadow-sm">
-                        <span class="font-display text-4xl font-extrabold text-brand-600">
+
+                    <!-- STEP 3 -->
+                    <li class="card flex flex-col gap-4">
+
+                        <span
+                            class="font-display text-4xl font-extrabold text-brand-600"
+                        >
                             03
                         </span>
 
-                        <h3 class="font-display text-2xl font-semibold text-ink">
+                        <h3
+                            class="text-primary font-display text-2xl font-semibold"
+                        >
                             Sẵn sàng khởi hành
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Xem lại toàn bộ kế hoạch và bắt đầu chuyến đi với mọi thông tin cần thiết.
                         </p>
+
                     </li>
 
                 </ol>
 
             </div>
+
         </section>
 
+
+
+        <!-- ===================== -->
         <!-- BẢNG GIÁ -->
-        <section class="section" aria-labelledby="bang-gia-title">
+        <!-- ===================== -->
+        <section
+            class="section"
+            aria-labelledby="bang-gia-title"
+        >
 
             <div class="flex flex-col gap-4 text-center">
 
-                <h2 id="bang-gia-title" class="font-display text-4xl font-bold text-ink">
+                <h2
+                    id="bang-gia-title"
+                    class="text-primary font-display text-3xl font-bold sm:text-4xl"
+                >
                     Các gói sử dụng
                 </h2>
 
-                <p class="font-body text-muted">
+                <p class="text-secondary">
                     Chọn gói phù hợp với nhu cầu lên kế hoạch cho chuyến đi của bạn.
                 </p>
 
             </div>
 
 
-            <ul class="grid items-stretch gap-6 pt-14 lg:grid-cols-3">
+            <ul
+                class="grid items-stretch gap-6 pt-14 lg:grid-cols-3"
+            >
 
-                <!-- GÓI CƠ BẢN -->
-                <li class="flex h-full flex-col gap-6 rounded-card border border-line bg-white p-8">
+
+                <!-- CƠ BẢN -->
+                <li class="card flex h-full flex-col gap-6 p-8">
 
                     <div class="flex flex-col gap-2">
-                        <h3 class="font-display text-2xl font-semibold text-ink">
+
+                        <h3
+                            class="text-primary font-display text-2xl font-semibold"
+                        >
                             Cơ bản
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Dành cho những chuyến đi đơn giản.
                         </p>
+
                     </div>
 
-                    <p class="font-display text-4xl font-extrabold text-ink">
+
+                    <p
+                        class="text-primary font-display text-3xl font-extrabold
+                               sm:text-4xl"
+                    >
                         Miễn phí
                     </p>
 
-                    <ul class="flex flex-col gap-3 text-muted">
+
+                    <ul class="text-secondary flex flex-col gap-3">
+
                         <li>✓ Lập lịch trình chuyến đi</li>
+
                         <li>✓ Lưu tối đa 20 địa điểm</li>
+
                         <li>✓ Theo dõi chi phí cơ bản</li>
+
                     </ul>
 
-                    <a href="#" class="btn border border-brand-600 text-brand-600 mt-auto">
+
+                    <a
+                        href="#"
+                        class="btn mt-auto border border-brand-600 text-brand-600"
+                    >
                         Chọn gói
                     </a>
 
                 </li>
 
 
-                <!-- GÓI PHỔ BIẾN -->
+
+                <!-- KHÁM PHÁ -->
                 <li
-                    class="relative flex h-full flex-col gap-6 rounded-card border border-line bg-white p-8 ring-2 ring-brand-600">
+                    class="card relative flex h-full flex-col gap-6
+                           border-brand-600 p-8 ring-2 ring-brand-600"
+                >
 
                     <span
-                        class="absolute -top-3 left-6 rounded-lg bg-brand-600 px-3 py-1 text-sm font-semibold text-white">
+                        class="absolute -top-3 left-6 rounded-lg
+                               bg-brand-600 px-3 py-1
+                               text-sm font-semibold text-white"
+                    >
                         Được chọn nhiều nhất
                     </span>
 
+
                     <div class="flex flex-col gap-2">
-                        <h3 class="font-display text-2xl font-semibold text-ink">
+
+                        <h3
+                            class="text-primary font-display text-2xl font-semibold"
+                        >
                             Khám phá
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Phù hợp với người thường xuyên đi du lịch.
                         </p>
+
                     </div>
 
-                    <p class="font-display text-4xl font-extrabold text-ink">
+
+                    <p
+                        class="text-primary font-display text-3xl font-extrabold
+                               sm:text-4xl"
+                    >
                         99.000đ
-                        <span class="text-base font-normal text-muted">
+
+                        <span
+                            class="text-secondary text-base font-normal"
+                        >
                             / tháng
                         </span>
                     </p>
 
-                    <ul class="flex flex-col gap-3 text-muted">
+
+                    <ul class="text-secondary flex flex-col gap-3">
+
                         <li>✓ Không giới hạn chuyến đi</li>
+
                         <li>✓ Không giới hạn địa điểm</li>
+
                         <li>✓ Quản lý chi phí chi tiết</li>
+
                         <li>✓ Chia sẻ lịch trình với bạn bè</li>
+
                     </ul>
 
-                    <a href="#" class="btn btn-primary mt-auto">
+
+                    <a
+                        href="#"
+                        class="btn btn-primary mt-auto"
+                    >
                         Chọn gói
                     </a>
 
                 </li>
 
 
-                <!-- GÓI NHÓM -->
-                <li class="flex h-full flex-col gap-6 rounded-card border border-line bg-white p-8">
+
+                <!-- NHÓM -->
+                <li class="card flex h-full flex-col gap-6 p-8">
 
                     <div class="flex flex-col gap-2">
-                        <h3 class="font-display text-2xl font-semibold text-ink">
+
+                        <h3
+                            class="text-primary font-display text-2xl font-semibold"
+                        >
                             Nhóm
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Dành cho nhóm bạn hoặc gia đình.
                         </p>
+
                     </div>
 
-                    <p class="font-display text-4xl font-extrabold text-ink">
+
+                    <p
+                        class="text-primary font-display text-3xl font-extrabold
+                               sm:text-4xl"
+                    >
                         199.000đ
-                        <span class="text-base font-normal text-muted">
+
+                        <span
+                            class="text-secondary text-base font-normal"
+                        >
                             / tháng
                         </span>
                     </p>
 
-                    <ul class="flex flex-col gap-3 text-muted">
+
+                    <ul class="text-secondary flex flex-col gap-3">
+
                         <li>✓ Tất cả tính năng gói Khám phá</li>
+
                         <li>✓ Lập kế hoạch cùng nhiều thành viên</li>
+
                         <li>✓ Phân chia chi phí trong nhóm</li>
+
                         <li>✓ Đồng bộ lịch trình</li>
+
                         <li>✓ Hỗ trợ ưu tiên</li>
+
                     </ul>
 
-                    <a href="#" class="btn border border-brand-600 text-brand-600 mt-auto">
+
+                    <a
+                        href="#"
+                        class="btn mt-auto border border-brand-600 text-brand-600"
+                    >
                         Chọn gói
                     </a>
 
@@ -455,18 +778,28 @@
         </section>
 
 
+
+        <!-- ===================== -->
         <!-- FAQ -->
-        <section class="section" aria-labelledby="faq-title">
+        <!-- ===================== -->
+        <section
+            class="section"
+            aria-labelledby="faq-title"
+        >
 
             <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
 
+
                 <div class="flex flex-col gap-4">
 
-                    <h2 id="faq-title" class="font-display text-4xl font-bold text-ink">
+                    <h2
+                        id="faq-title"
+                        class="text-primary font-display text-3xl font-bold sm:text-4xl"
+                    >
                         Câu hỏi thường gặp
                     </h2>
 
-                    <p class="font-body text-muted">
+                    <p class="text-secondary">
                         Một số câu hỏi phổ biến khi sử dụng TripMate.
                     </p>
 
@@ -475,75 +808,115 @@
 
                 <div class="flex flex-col gap-6">
 
-                    <article class="flex flex-col gap-2 border-b border-line pb-6">
-                        <h3 class="font-display text-xl font-semibold text-ink">
+
+                    <article
+                        class="line-theme flex flex-col gap-2 border-b pb-6"
+                    >
+
+                        <h3
+                            class="text-primary font-display text-xl font-semibold"
+                        >
                             TripMate có miễn phí không?
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Có. Bạn có thể sử dụng gói Cơ bản miễn phí để lập lịch trình,
                             lưu địa điểm và theo dõi chi phí cho chuyến đi.
                         </p>
+
                     </article>
 
 
-                    <article class="flex flex-col gap-2 border-b border-line pb-6">
-                        <h3 class="font-display text-xl font-semibold text-ink">
+
+                    <article
+                        class="line-theme flex flex-col gap-2 border-b pb-6"
+                    >
+
+                        <h3
+                            class="text-primary font-display text-xl font-semibold"
+                        >
                             Tôi có thể sử dụng TripMate trên điện thoại không?
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Có. TripMate được thiết kế để sử dụng thuận tiện trên máy tính,
                             máy tính bảng và điện thoại.
                         </p>
+
                     </article>
 
 
-                    <article class="flex flex-col gap-2 border-b border-line pb-6">
-                        <h3 class="font-display text-xl font-semibold text-ink">
+
+                    <article
+                        class="line-theme flex flex-col gap-2 border-b pb-6"
+                    >
+
+                        <h3
+                            class="text-primary font-display text-xl font-semibold"
+                        >
                             Tôi có thể chia sẻ lịch trình cho bạn bè không?
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Có. Gói Khám phá và gói Nhóm cho phép bạn chia sẻ lịch trình
                             với những người cùng tham gia chuyến đi.
                         </p>
+
                     </article>
 
 
-                    <article class="flex flex-col gap-2 border-b border-line pb-6">
-                        <h3 class="font-display text-xl font-semibold text-ink">
+
+                    <article
+                        class="line-theme flex flex-col gap-2 border-b pb-6"
+                    >
+
+                        <h3
+                            class="text-primary font-display text-xl font-semibold"
+                        >
                             TripMate có hỗ trợ quản lý chi phí không?
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Có. Bạn có thể ghi lại và theo dõi các khoản chi trong suốt
                             hành trình.
                         </p>
+
                     </article>
 
 
-                    <article class="flex flex-col gap-2 border-b border-line pb-6">
-                        <h3 class="font-display text-xl font-semibold text-ink">
+
+                    <article
+                        class="line-theme flex flex-col gap-2 border-b pb-6"
+                    >
+
+                        <h3
+                            class="text-primary font-display text-xl font-semibold"
+                        >
                             Tôi có thể thay đổi gói sử dụng không?
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Có. Bạn có thể nâng cấp hoặc thay đổi gói sử dụng khi nhu cầu
                             của mình thay đổi.
                         </p>
+
                     </article>
 
 
+
                     <article class="flex flex-col gap-2">
-                        <h3 class="font-display text-xl font-semibold text-ink">
+
+                        <h3
+                            class="text-primary font-display text-xl font-semibold"
+                        >
                             Dữ liệu chuyến đi của tôi có được lưu lại không?
                         </h3>
 
-                        <p class="text-muted">
+                        <p class="text-secondary">
                             Các lịch trình và địa điểm đã lưu sẽ được giữ lại để bạn
                             có thể tiếp tục quản lý chuyến đi khi quay lại.
                         </p>
+
                     </article>
 
                 </div>
@@ -552,21 +925,40 @@
 
         </section>
 
+
+
+        <!-- ===================== -->
         <!-- CTA -->
-        <section class="section" aria-labelledby="cta-title">
+        <!-- ===================== -->
+        <section
+            class="section"
+            aria-labelledby="cta-title"
+        >
 
-            <div class="flex flex-col items-center gap-6 rounded-card bg-brand-600 p-8 text-center text-white">
+            <div
+                class="flex flex-col items-center gap-6
+                       rounded-card bg-brand-600 p-8
+                       text-center text-white"
+            >
 
-                <h2 id="cta-title" class="font-display text-4xl font-bold">
+                <h2
+                    id="cta-title"
+                    class="font-display text-3xl font-bold sm:text-4xl"
+                >
                     Bắt đầu lên kế hoạch cho chuyến đi
                 </h2>
+
 
                 <p class="max-w-2xl text-white">
                     Tạo lịch trình, lưu địa điểm và quản lý mọi thứ cho chuyến đi
                     tiếp theo của bạn cùng TripMate.
                 </p>
 
-                <a href="#" class="btn bg-white text-brand-600">
+
+                <a
+                    href="#"
+                    class="btn bg-white text-brand-600"
+                >
                     Bắt đầu ngay
                 </a>
 
@@ -574,27 +966,38 @@
 
         </section>
 
+
     </main>
 
 
-    <footer class="border-t border-line bg-surface">
 
-        <div class="mx-auto grid w-full max-w-6xl gap-10 px-5 py-20
-               sm:grid-cols-2 lg:grid-cols-4">
+    <!-- ===================== -->
+    <!-- FOOTER -->
+    <!-- ===================== -->
+    <footer class="surface-soft line-theme border-t">
 
-            <!-- THƯƠNG HIỆU -->
+        <div
+            class="mx-auto grid w-full max-w-6xl gap-10 px-5 py-20
+                   sm:grid-cols-2 lg:grid-cols-4"
+        >
+
+
+            <!-- BRAND -->
             <div class="flex flex-col gap-4">
 
-                <a href="#" class="font-display text-2xl font-bold text-ink">
+                <a
+                    href="#"
+                    class="text-primary font-display text-2xl font-bold"
+                >
                     TripMate
                 </a>
 
-                <p class="text-muted">
-                    Công cụ giúp bạn lập kế hoạch và quản lý chuyến đi
-                    dễ dàng hơn.
+                <p class="text-secondary">
+                    Công cụ giúp bạn lập kế hoạch và quản lý chuyến đi dễ dàng hơn.
                 </p>
 
             </div>
+
 
 
             <!-- SẢN PHẨM -->
@@ -602,11 +1005,15 @@
 
                 <div class="flex flex-col gap-4">
 
-                    <h2 id="footer-san-pham" class="font-display font-semibold text-ink">
+                    <h2
+                        id="footer-san-pham"
+                        class="text-primary font-display font-semibold"
+                    >
                         Sản phẩm
                     </h2>
 
-                    <ul class="flex flex-col gap-3 text-muted">
+
+                    <ul class="text-secondary flex flex-col gap-3">
 
                         <li>
                             <a href="#tinh-nang-title">
@@ -633,16 +1040,21 @@
             </nav>
 
 
+
             <!-- HỖ TRỢ -->
             <nav aria-labelledby="footer-ho-tro">
 
                 <div class="flex flex-col gap-4">
 
-                    <h2 id="footer-ho-tro" class="font-display font-semibold text-ink">
+                    <h2
+                        id="footer-ho-tro"
+                        class="text-primary font-display font-semibold"
+                    >
                         Hỗ trợ
                     </h2>
 
-                    <ul class="flex flex-col gap-3 text-muted">
+
+                    <ul class="text-secondary flex flex-col gap-3">
 
                         <li>
                             <a href="#">
@@ -669,26 +1081,36 @@
             </nav>
 
 
-            <!-- ĐỊA CHỈ -->
+
+            <!-- LIÊN HỆ -->
             <div class="flex flex-col gap-4">
 
-                <h2 class="font-display font-semibold text-ink">
+                <h2
+                    class="text-primary font-display font-semibold"
+                >
                     Liên hệ
                 </h2>
 
-                <address class="not-italic text-muted">
+
+                <address class="text-secondary not-italic">
                     TP. Hồ Chí Minh, Việt Nam
                 </address>
 
-                <a href="mailto:hello@tripmate.vn" class="text-muted">
+
+                <a
+                    href="mailto:hello@tripmate.vn"
+                    class="text-secondary"
+                >
                     hello@tripmate.vn
                 </a>
 
             </div>
 
+
         </div>
 
     </footer>
+
 
 </body>
 
