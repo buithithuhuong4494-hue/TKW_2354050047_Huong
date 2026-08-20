@@ -3,20 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Brand */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-600: #3b82f6;
-  --color-brand-700: #2563eb;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
 
-  /* Accent */
   --color-accent-500: #14b8a6;
 
-  /* Text */
-  --color-ink: #172033;
+  --color-ink: #0f172a;
   --color-muted: #64748b;
 
-  /* Surface */
   --color-surface: #f8fafc;
   --color-line: #e2e8f0;
   --color-white: #ffffff;
@@ -24,7 +18,7 @@
   --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --radius-card: 0.75rem;
+  --radius-card: 0.5rem;
 }
 
 .section {
@@ -38,6 +32,5 @@
 }
 
 .btn-primary {
-  @apply bg-brand-600 text-white
-         hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-md;
+  @apply bg-brand-600 text-white hover:bg-brand-700;
 }
