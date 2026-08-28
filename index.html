@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="./dist/output.css">
 </head>
 
+<div id="nav-sentinel" aria-hidden="true"></div>
 
 <body class="page-surface font-body">
-
+    <div id="nav-sentinel" aria-hidden="true"></div>
     <!-- SKIP LINK -->
     <a href="#main" class="sr-only focus:not-sr-only">
         Bỏ qua đến nội dung chính
@@ -61,8 +62,9 @@
                     </a>
                 </div>
 
-                <button type="button" class="line-theme grid h-10 w-10 place-items-center rounded-lg border lg:hidden"
-                    aria-label="Mở menu">
+                <button type="button" data-nav-toggle
+                    class="line-theme grid h-10 w-10 place-items-center rounded-lg border lg:hidden"
+                    aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
                     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" />
                     </svg>
@@ -71,6 +73,68 @@
             </div>
 
         </nav>
+
+        <div id="mobile-menu" data-mobile-menu class="hidden border-t border-line px-5 py-4 lg:hidden
+           dark:border-line-invert">
+            <ul class="flex flex-col gap-4">
+
+                <li>
+                    <a href="#tinh-nang-title" class="text-secondary">
+                        Tính năng
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./pricing.html" class="text-secondary">
+                        Bảng giá
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#faq-title" class="text-secondary">
+                        FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./contact.html" class="text-secondary">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="mobile-menu" data-mobile-menu class="hidden border-t border-line px-5 py-4 lg:hidden
+           dark:border-line-invert">
+            <ul class="flex flex-col gap-4">
+
+                <li>
+                    <a href="#tinh-nang-title" class="text-secondary">
+                        Tính năng
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./pricing.html" class="text-secondary">
+                        Bảng giá
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#faq-title" class="text-secondary">
+                        FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./contact.html" class="text-secondary">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+        </div>
 
     </header>
 
@@ -885,7 +949,7 @@
            focus:ring-offset-2" aria-label="Lên đầu trang">
         ↑
     </button>
-    
+
     <script type="module" src="./js/main.js"></script>
 
 </body>
