@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="dark">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,25 @@
 
     <title>TripMate</title>
 
+    <script>
+        (function () {
+            const saved = localStorage.getItem("theme");
+
+            const dark = saved
+                ? saved === "dark"
+                : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            document.documentElement.classList.toggle("dark", dark);
+        })();
+    </script>
+
     <link rel="stylesheet" href="./dist/output.css">
 </head>
 
-<div id="nav-sentinel" aria-hidden="true"></div>
-
 <body class="page-surface font-body">
+
     <div id="nav-sentinel" aria-hidden="true"></div>
+
     <!-- SKIP LINK -->
     <a href="#main" class="sr-only focus:not-sr-only">
         Bỏ qua đến nội dung chính
@@ -62,48 +74,22 @@
                     </a>
                 </div>
 
+                <button type="button" data-theme-toggle
+                    class="line-theme grid h-10 w-10 place-items-center rounded-lg border"
+                    aria-label="Chuyển chế độ giao diện" aria-pressed="false">
+                    <span aria-hidden="true">☾</span>
+                </button>
+
                 <button type="button" data-nav-toggle
                     class="line-theme grid h-10 w-10 place-items-center rounded-lg border lg:hidden"
-                    aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+                    aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </button>
-
             </div>
 
         </nav>
-
-        <div id="mobile-menu" data-mobile-menu class="hidden border-t border-line px-5 py-4 lg:hidden
-           dark:border-line-invert">
-            <ul class="flex flex-col gap-4">
-
-                <li>
-                    <a href="#tinh-nang-title" class="text-secondary">
-                        Tính năng
-                    </a>
-                </li>
-
-                <li>
-                    <a href="./pricing.html" class="text-secondary">
-                        Bảng giá
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#faq-title" class="text-secondary">
-                        FAQ
-                    </a>
-                </li>
-
-                <li>
-                    <a href="./contact.html" class="text-secondary">
-                        Liên hệ
-                    </a>
-                </li>
-
-            </ul>
-        </div>
 
         <div id="mobile-menu" data-mobile-menu class="hidden border-t border-line px-5 py-4 lg:hidden
            dark:border-line-invert">
@@ -664,11 +650,14 @@
         <!-- ===================== -->
         <!-- FAQ -->
         <!-- ===================== -->
-        <section class="section" aria-labelledby="faq-title">
+        <!-- ===================== -->
+        <!-- FAQ ACCORDION -->
+        <!-- ===================== -->
+        <section id="faq" class="section" aria-labelledby="faq-title">
 
             <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
 
-
+                <!-- TIÊU ĐỀ -->
                 <div class="flex flex-col gap-4">
 
                     <h2 id="faq-title" class="text-primary font-display text-3xl font-bold sm:text-4xl">
@@ -682,94 +671,167 @@
                 </div>
 
 
-                <div class="flex flex-col gap-6">
+                <!-- DANH SÁCH FAQ -->
+                <div class="flex flex-col">
 
+                    <!-- FAQ 1 -->
+                    <article class="line-theme border-b">
 
-                    <article class="line-theme flex flex-col gap-2 border-b pb-6">
+                        <h3>
+                            <button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-1"
+                                class="text-primary flex w-full items-center justify-between gap-4 py-6
+                               text-left font-display text-xl font-semibold">
+                                <span>
+                                    TripMate có miễn phí không?
+                                </span>
 
-                        <h3 class="text-primary font-display text-xl font-semibold">
-                            TripMate có miễn phí không?
+                                <span aria-hidden="true">
+                                    +
+                                </span>
+                            </button>
                         </h3>
 
-                        <p class="text-secondary">
-                            Có. Bạn có thể sử dụng gói Cơ bản miễn phí để lập lịch trình,
-                            lưu địa điểm và theo dõi chi phí cho chuyến đi.
-                        </p>
+                        <div id="faq-panel-1" hidden class="pb-6">
+                            <p class="text-secondary">
+                                Có. Bạn có thể sử dụng gói Cơ bản miễn phí để lập lịch trình,
+                                lưu địa điểm và theo dõi chi phí cho chuyến đi.
+                            </p>
+                        </div>
 
                     </article>
 
 
+                    <!-- FAQ 2 -->
+                    <article class="line-theme border-b">
 
-                    <article class="line-theme flex flex-col gap-2 border-b pb-6">
+                        <h3>
+                            <button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-2"
+                                class="text-primary flex w-full items-center justify-between gap-4 py-6
+                               text-left font-display text-xl font-semibold">
+                                <span>
+                                    Tôi có thể sử dụng TripMate trên điện thoại không?
+                                </span>
 
-                        <h3 class="text-primary font-display text-xl font-semibold">
-                            Tôi có thể sử dụng TripMate trên điện thoại không?
+                                <span aria-hidden="true">
+                                    +
+                                </span>
+                            </button>
                         </h3>
 
-                        <p class="text-secondary">
-                            Có. TripMate được thiết kế để sử dụng thuận tiện trên máy tính,
-                            máy tính bảng và điện thoại.
-                        </p>
+                        <div id="faq-panel-2" hidden class="pb-6">
+                            <p class="text-secondary">
+                                Có. TripMate được thiết kế để sử dụng thuận tiện trên máy tính,
+                                máy tính bảng và điện thoại.
+                            </p>
+                        </div>
 
                     </article>
 
 
+                    <!-- FAQ 3 -->
+                    <article class="line-theme border-b">
 
-                    <article class="line-theme flex flex-col gap-2 border-b pb-6">
+                        <h3>
+                            <button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-3"
+                                class="text-primary flex w-full items-center justify-between gap-4 py-6
+                               text-left font-display text-xl font-semibold">
+                                <span>
+                                    Tôi có thể chia sẻ lịch trình cho bạn bè không?
+                                </span>
 
-                        <h3 class="text-primary font-display text-xl font-semibold">
-                            Tôi có thể chia sẻ lịch trình cho bạn bè không?
+                                <span aria-hidden="true">
+                                    +
+                                </span>
+                            </button>
                         </h3>
 
-                        <p class="text-secondary">
-                            Có. Gói Khám phá và gói Nhóm cho phép bạn chia sẻ lịch trình
-                            với những người cùng tham gia chuyến đi.
-                        </p>
+                        <div id="faq-panel-3" hidden class="pb-6">
+                            <p class="text-secondary">
+                                Có. Gói Khám phá và gói Nhóm cho phép bạn chia sẻ lịch trình
+                                với những người cùng tham gia chuyến đi.
+                            </p>
+                        </div>
 
                     </article>
 
 
+                    <!-- FAQ 4 -->
+                    <article class="line-theme border-b">
 
-                    <article class="line-theme flex flex-col gap-2 border-b pb-6">
+                        <h3>
+                            <button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-4"
+                                class="text-primary flex w-full items-center justify-between gap-4 py-6
+                               text-left font-display text-xl font-semibold">
+                                <span>
+                                    TripMate có hỗ trợ quản lý chi phí không?
+                                </span>
 
-                        <h3 class="text-primary font-display text-xl font-semibold">
-                            TripMate có hỗ trợ quản lý chi phí không?
+                                <span aria-hidden="true">
+                                    +
+                                </span>
+                            </button>
                         </h3>
 
-                        <p class="text-secondary">
-                            Có. Bạn có thể ghi lại và theo dõi các khoản chi trong suốt
-                            hành trình.
-                        </p>
+                        <div id="faq-panel-4" hidden class="pb-6">
+                            <p class="text-secondary">
+                                Có. Bạn có thể ghi lại và theo dõi các khoản chi
+                                trong suốt hành trình.
+                            </p>
+                        </div>
 
                     </article>
 
 
+                    <!-- FAQ 5 -->
+                    <article class="line-theme border-b">
 
-                    <article class="line-theme flex flex-col gap-2 border-b pb-6">
+                        <h3>
+                            <button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-5"
+                                class="text-primary flex w-full items-center justify-between gap-4 py-6
+                               text-left font-display text-xl font-semibold">
+                                <span>
+                                    Tôi có thể thay đổi gói sử dụng không?
+                                </span>
 
-                        <h3 class="text-primary font-display text-xl font-semibold">
-                            Tôi có thể thay đổi gói sử dụng không?
+                                <span aria-hidden="true">
+                                    +
+                                </span>
+                            </button>
                         </h3>
 
-                        <p class="text-secondary">
-                            Có. Bạn có thể nâng cấp hoặc thay đổi gói sử dụng khi nhu cầu
-                            của mình thay đổi.
-                        </p>
+                        <div id="faq-panel-5" hidden class="pb-6">
+                            <p class="text-secondary">
+                                Có. Bạn có thể nâng cấp hoặc thay đổi gói sử dụng
+                                khi nhu cầu của mình thay đổi.
+                            </p>
+                        </div>
 
                     </article>
 
 
+                    <!-- FAQ 6 -->
+                    <article>
 
-                    <article class="flex flex-col gap-2">
+                        <h3>
+                            <button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-6"
+                                class="text-primary flex w-full items-center justify-between gap-4 py-6
+                               text-left font-display text-xl font-semibold">
+                                <span>
+                                    Dữ liệu chuyến đi của tôi có được lưu lại không?
+                                </span>
 
-                        <h3 class="text-primary font-display text-xl font-semibold">
-                            Dữ liệu chuyến đi của tôi có được lưu lại không?
+                                <span aria-hidden="true">
+                                    +
+                                </span>
+                            </button>
                         </h3>
 
-                        <p class="text-secondary">
-                            Các lịch trình và địa điểm đã lưu sẽ được giữ lại để bạn
-                            có thể tiếp tục quản lý chuyến đi khi quay lại.
-                        </p>
+                        <div id="faq-panel-6" hidden class="pb-6">
+                            <p class="text-secondary">
+                                Các lịch trình và địa điểm đã lưu sẽ được giữ lại
+                                để bạn có thể tiếp tục quản lý chuyến đi khi quay lại.
+                            </p>
+                        </div>
 
                     </article>
 
