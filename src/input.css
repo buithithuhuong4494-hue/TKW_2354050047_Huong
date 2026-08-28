@@ -108,4 +108,37 @@
   @apply text-sm text-red-600;
 }
 
+.pricing-switch {
+  @apply relative inline-flex h-7 w-14 shrink-0 items-center
+         rounded-full border border-line bg-line p-0
+         transition-colors
+         dark:border-line-invert dark:bg-line-invert;
+}
+
+.pricing-switch[aria-checked="true"] {
+  @apply bg-brand-600;
+}
+
+.pricing-switch [data-pricing-knob] {
+  @apply absolute left-1 top-1 h-5 w-5 rounded-full
+         bg-white transition-transform duration-200;
+}
+
+.pricing-switch[aria-checked="true"] [data-pricing-knob] {
+  transform: translateX(28px);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 }
