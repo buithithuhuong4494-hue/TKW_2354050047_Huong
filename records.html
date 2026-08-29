@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dữ liệu | TripMate</title>
+
+    <script>
+        (function () {
+            const saved = localStorage.getItem("theme");
+
+            const dark = saved
+                ? saved === "dark"
+                : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            document.documentElement.classList.toggle("dark", dark);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="page-surface font-body">
+
+    <a href="#main" class="sr-only focus:not-sr-only">
+        Bỏ qua đến nội dung chính
+    </a>
+
+    <header class="line-theme border-b bg-white dark:bg-surface-dark">
+
+        <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5" aria-label="Điều hướng chính">
+            <a href="./index.html" class="font-display text-2xl font-bold text-brand-600">
+                TripMate
+            </a>
+
+            <ul class="hidden items-center gap-8 lg:flex">
+                <li>
+                    <a href="./index.html" class="text-secondary">
+                        Trang chủ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./pricing.html" class="text-secondary">
+                        Bảng giá
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./contact.html" class="text-secondary">
+                        Liên hệ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./records.html" class="font-semibold text-brand-600">
+                        Dữ liệu
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main id="main">
+
+        <section class="section" aria-labelledby="records-title" data-records-page>
+
+            <div class="flex flex-col gap-4">
+
+                <p class="font-semibold text-brand-600">
+                    DỮ LIỆU
+                </p>
+
+                <h1 id="records-title" class="text-primary font-display text-4xl font-black sm:text-5xl">
+                    Danh sách giao dịch
+                </h1>
+
+                <p class="text-secondary max-w-2xl">
+                    Dữ liệu được tải từ file JSON và hiển thị động bằng JavaScript.
+                </p>
+
+            </div>
+
+
+            <!-- LOADING -->
+            <div data-state-loading class="surface-soft mt-10 rounded-card p-6">
+                <p class="text-secondary">
+                    Đang tải dữ liệu...
+                </p>
+            </div>
+
+
+            <!-- ERROR -->
+            <div data-state-error class="mt-10 hidden rounded-card border border-red-500 p-6" role="alert">
+                <p data-error-message class="text-red-600"></p>
+            </div>
+
+
+            <!-- EMPTY -->
+            <div data-state-empty class="surface-soft mt-10 hidden rounded-card p-6">
+                <p class="text-secondary">
+                    Không có dữ liệu phù hợp.
+                </p>
+            </div>
+
+
+            <!-- DATA -->
+            <div data-state-data class="mt-10 hidden overflow-x-auto">
+
+                <table class="w-full min-w-[800px] border-collapse">
+
+                    <thead>
+                        <tr class="line-theme border-b">
+                            <th class="p-4 text-left">Người tạo</th>
+                            <th class="p-4 text-left">Loại chuyến</th>
+                            <th class="p-4 text-left">Trạng thái</th>
+                            <th class="p-4 text-right">Số người</th>
+                            <th class="p-4 text-right">Ngân sách</th>
+                            <th class="p-4 text-left">Ngày khởi hành</th>
+                        </tr>
+                    </thead>
+
+                    <tbody data-records-body>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <template id="row-template">
+
+        <tr class="line-theme border-b">
+
+            <td data-cell="traveler" class="p-4"></td>
+            <td data-cell="category" class="p-4"></td>
+            <td data-cell="status" class="p-4"></td>
+            <td data-cell="people" class="p-4 text-right"></td>
+            <td data-cell="amount" class="p-4 text-right"></td>
+            <td data-cell="date" class="p-4"></td>
+
+        </tr>
+
+    </template>
+
+
+    <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>
