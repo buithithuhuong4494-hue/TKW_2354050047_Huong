@@ -1,0 +1,29 @@
+[
+  {
+    "id": "TRIP-001",
+    "traveler": "Nguyễn Minh Anh",
+    "category": "Du lịch biển",
+    "status": "da-hoan-thanh",
+    "people": 4,
+    "amount": 8500000,
+    "date": "2026-08-15"
+  },
+  {
+    "id": "TRIP-002",
+    "traveler": "Trần Hoàng Nam",
+    "category": "Khám phá",
+    "status": "dang-len-ke-hoach",
+    "people": 2,
+    "amount": 5200000,
+    "date": "2026-09-02"
+  },
+  {
+    "id": "TRIP-003",
+    "traveler": "Lê Thu Hà",
+    "category": "Nghỉ dưỡng",
+    "status": "da-xac-nhan",
+    "people": 5,
+    "amount": 12500000,
+    "date": "2026-09-10"
+  }
+]
