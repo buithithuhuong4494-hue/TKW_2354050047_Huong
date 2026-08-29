@@ -162,7 +162,10 @@
 
 
                 <!-- FORM -->
-                <form class="card flex flex-col gap-6 p-6 sm:p-8" action="#" method="post">
+                <form class="card flex flex-col gap-6 p-6 sm:p-8" action="#" method="post" data-contact-form novalidate>
+
+                    <div data-form-summary class="hidden rounded-card border border-red-500 p-4 text-red-600"
+                        role="alert"></div>
 
                     <!-- 1. HỌ TÊN -->
                     <div class="flex flex-col gap-2">
@@ -172,7 +175,10 @@
                             <span class="text-red-600" aria-hidden="true">*</span>
                         </label>
 
-                        <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name">
+                        <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name"
+                            aria-describedby="ho-ten-error">
+
+                        <p id="ho-ten-error" class="text-sm text-red-600" role="alert"></p>
 
                     </div>
 
@@ -187,15 +193,15 @@
                         </label>
 
                         <input class="field-input" id="email" name="email" type="email" required autocomplete="email"
-                            aria-describedby="email-hint">
+                            aria-describedby="email-hint email-error">
 
                         <p id="email-hint" class="text-secondary text-xs">
                             Chúng tôi sẽ phản hồi qua địa chỉ email này.
                         </p>
 
+                        <p id="email-error" class="text-sm text-red-600" role="alert"></p>
+
                     </div>
-
-
 
                     <!-- 3. SỐ ĐIỆN THOẠI -->
                     <div class="flex flex-col gap-2">
@@ -217,8 +223,6 @@
 
                     </div>
 
-
-
                     <!-- 4. CHỦ ĐỀ -->
                     <div class="flex flex-col gap-2">
 
@@ -227,8 +231,7 @@
                             <span class="text-red-600" aria-hidden="true">*</span>
                         </label>
 
-                        <select class="field-input" id="chu-de" name="chuDe" required>
-
+                        <select class="field-input" id="chu-de" name="chuDe" required aria-describedby="chu-de-error">
                             <option value="">
                                 Chọn chủ đề
                             </option>
@@ -250,10 +253,8 @@
                             </option>
 
                         </select>
-
+                        <p id="chu-de-error" class="text-sm text-red-600" role="alert"></p>
                     </div>
-
-
 
                     <!-- 5. NỘI DUNG -->
                     <div class="flex flex-col gap-2">
@@ -264,7 +265,9 @@
                         </label>
 
                         <textarea class="field-input min-h-36 resize-y" id="noi-dung" name="noiDung" required rows="6"
-                            aria-describedby="noi-dung-hint"></textarea>
+                            aria-describedby="noi-dung-hint noi-dung-error"></textarea>
+
+                        <p id="noi-dung-error" class="text-sm text-red-600" role="alert"></p>
 
                         <p id="noi-dung-hint" class="text-secondary text-xs">
                             Mô tả rõ vấn đề để chúng tôi có thể hỗ trợ bạn nhanh hơn.
@@ -272,21 +275,24 @@
 
                     </div>
 
-
-
                     <!-- 6. CHECKBOX -->
-                    <div class="flex items-start gap-3">
+                    <div class="flex flex-col gap-2">
 
-                        <input id="dong-y" name="dongY" type="checkbox" required class="mt-1 h-4 w-4 accent-brand-600">
+                        <div class="flex items-start gap-3">
 
-                        <label for="dong-y" class="text-secondary text-sm">
-                            Tôi đồng ý để TripMate sử dụng thông tin trên nhằm phản hồi yêu cầu hỗ trợ.
-                            <span class="text-red-600" aria-hidden="true">*</span>
-                        </label>
+                            <input id="dong-y" name="dongY" type="checkbox" required
+                                class="mt-1 h-4 w-4 accent-brand-600" aria-describedby="dong-y-error">
+
+                            <label for="dong-y" class="text-secondary text-sm">
+                                Tôi đồng ý để TripMate sử dụng thông tin trên nhằm phản hồi yêu cầu hỗ trợ.
+                                <span class="text-red-600" aria-hidden="true">*</span>
+                            </label>
+
+                        </div>
+
+                        <p id="dong-y-error" class="text-sm text-red-600" role="alert"></p>
 
                     </div>
-
-
 
                     <!-- SUBMIT -->
                     <button type="submit" class="btn btn-primary w-full sm:w-auto sm:self-start">
@@ -431,6 +437,22 @@
         </div>
 
     </footer>
+
+    <div data-toast hidden role="status" aria-live="polite" style="
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 9999;
+        background: #16a34a;
+        color: white;
+        padding: 16px 20px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    ">
+        Gửi yêu cầu thành công.
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
 
 </body>
 

@@ -88,6 +88,140 @@
 
                 </div>
 
+                <div class="mt-8 grid gap-4 md:grid-cols-3">
+
+                    <!-- TÌM KIẾM -->
+                    <div class="flex flex-col gap-2">
+                        <label for="record-search" class="font-semibold">
+                            Tìm kiếm
+                        </label>
+
+                        <input id="record-search" type="search" data-search class="field-input"
+                            placeholder="Nhập tên người tạo...">
+                    </div>
+
+
+                    <!-- LỌC LOẠI CHUYẾN -->
+                    <div class="flex flex-col gap-2">
+                        <label for="record-category" class="font-semibold">
+                            Loại chuyến
+                        </label>
+
+                        <select id="record-category" data-category-filter class="field-input">
+                            <option value="all">Tất cả</option>
+                            <option value="Du lịch biển">Du lịch biển</option>
+                            <option value="Khám phá">Khám phá</option>
+                            <option value="Nghỉ dưỡng">Nghỉ dưỡng</option>
+                        </select>
+                    </div>
+
+
+                    <!-- SẮP XẾP -->
+                    <div class="flex flex-col gap-2">
+                        <label for="record-sort" class="font-semibold">
+                            Sắp xếp
+                        </label>
+
+                        <select id="record-sort" data-sort class="field-input">
+                            <option value="date-desc">Ngày mới nhất</option>
+                            <option value="date-asc">Ngày cũ nhất</option>
+                            <option value="amount-desc">Ngân sách cao nhất</option>
+                            <option value="amount-asc">Ngân sách thấp nhất</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+
+                    <button type="button" data-add-toggle class="btn btn-primary">
+                        Thêm chuyến đi
+                    </button>
+
+                    <button type="button" data-reset-records class="btn line-theme border">
+                        Khôi phục dữ liệu mẫu
+                    </button>
+
+                </div>
+
+                <form data-record-form class="surface-soft mt-6 hidden rounded-card p-6">
+
+                    <div class="grid gap-4 md:grid-cols-2">
+
+                        <div>
+                            <label for="trip-id" class="field-label">
+                                Mã chuyến
+                            </label>
+
+                            <input id="trip-id" name="id" type="text" class="field-input" required>
+                        </div>
+
+                        <div>
+                            <label for="trip-traveler" class="field-label">
+                                Người tạo
+                            </label>
+
+                            <input id="trip-traveler" name="traveler" type="text" class="field-input" required>
+                        </div>
+
+                        <div>
+                            <label for="trip-category" class="field-label">
+                                Loại chuyến
+                            </label>
+
+                            <select id="trip-category" name="category" class="field-input" required>
+                                <option value="">Chọn loại chuyến</option>
+                                <option value="Du lịch biển">Du lịch biển</option>
+                                <option value="Khám phá">Khám phá</option>
+                                <option value="Nghỉ dưỡng">Nghỉ dưỡng</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="trip-status" class="field-label">
+                                Trạng thái
+                            </label>
+
+                            <select id="trip-status" name="status" class="field-input" required>
+                                <option value="dang-len-ke-hoach">Đang lên kế hoạch</option>
+                                <option value="da-xac-nhan">Đã xác nhận</option>
+                                <option value="da-hoan-thanh">Đã hoàn thành</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="trip-people" class="field-label">
+                                Số người
+                            </label>
+
+                            <input id="trip-people" name="people" type="number" min="1" class="field-input" required>
+                        </div>
+
+                        <div>
+                            <label for="trip-amount" class="field-label">
+                                Ngân sách
+                            </label>
+
+                            <input id="trip-amount" name="amount" type="number" min="0" class="field-input" required>
+                        </div>
+
+                        <div>
+                            <label for="trip-date" class="field-label">
+                                Ngày khởi hành
+                            </label>
+
+                            <input id="trip-date" name="date" type="date" class="field-input" required>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-6">
+                        <button type="submit" class="btn btn-primary">
+                            Lưu chuyến đi
+                        </button>
+                    </div>
+
+                </form>
 
                 <!-- LOADING -->
                 <div data-state-loading class="surface-soft mt-10 rounded-card p-6">
@@ -125,6 +259,7 @@
                                 <th class="p-4 text-right">Số người</th>
                                 <th class="p-4 text-right">Ngân sách</th>
                                 <th class="p-4 text-left">Ngày khởi hành</th>
+                                <th class="p-4 text-center">Thao tác</th>
                             </tr>
                         </thead>
 
@@ -153,11 +288,14 @@
             <td data-cell="people" class="p-4 text-right"></td>
             <td data-cell="amount" class="p-4 text-right"></td>
             <td data-cell="date" class="p-4"></td>
-
+            <td class="p-4 text-center">
+                <button type="button" data-delete-record class="text-red-600">
+                    Xóa
+                </button>
+            </td>
         </tr>
 
     </template>
-
 
     <script type="module" src="./js/main.js"></script>
 
