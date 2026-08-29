@@ -70,65 +70,70 @@
 
         <section class="section" aria-labelledby="records-title" data-records-page>
 
-            <div class="flex flex-col gap-4">
+            <div class="mx-auto w-full max-w-6xl">
 
-                <p class="font-semibold text-brand-600">
-                    DỮ LIỆU
-                </p>
+                <div class="flex flex-col gap-4">
 
-                <h1 id="records-title" class="text-primary font-display text-4xl font-black sm:text-5xl">
-                    Danh sách giao dịch
-                </h1>
+                    <p class="font-semibold text-brand-600">
+                        DỮ LIỆU
+                    </p>
 
-                <p class="text-secondary max-w-2xl">
-                    Dữ liệu được tải từ file JSON và hiển thị động bằng JavaScript.
-                </p>
+                    <h1 id="records-title" class="text-primary font-display text-4xl font-black sm:text-5xl">
+                        Danh sách chuyến đi
+                    </h1>
 
-            </div>
+                    <p class="text-secondary max-w-2xl">
+                        Dữ liệu được tải từ file JSON và hiển thị động bằng JavaScript.
+                    </p>
 
-
-            <!-- LOADING -->
-            <div data-state-loading class="surface-soft mt-10 rounded-card p-6">
-                <p class="text-secondary">
-                    Đang tải dữ liệu...
-                </p>
-            </div>
+                </div>
 
 
-            <!-- ERROR -->
-            <div data-state-error class="mt-10 hidden rounded-card border border-red-500 p-6" role="alert">
-                <p data-error-message class="text-red-600"></p>
-            </div>
+                <!-- LOADING -->
+                <div data-state-loading class="surface-soft mt-10 rounded-card p-6">
+                    <p class="text-secondary">
+                        Đang tải dữ liệu...
+                    </p>
+                </div>
 
 
-            <!-- EMPTY -->
-            <div data-state-empty class="surface-soft mt-10 hidden rounded-card p-6">
-                <p class="text-secondary">
-                    Không có dữ liệu phù hợp.
-                </p>
-            </div>
+                <!-- ERROR -->
+                <div data-state-error class="mt-10 hidden rounded-card border border-red-500 p-6" role="alert">
+                    <p data-error-message class="text-red-600"></p>
+                </div>
 
 
-            <!-- DATA -->
-            <div data-state-data class="mt-10 hidden overflow-x-auto">
+                <!-- EMPTY -->
+                <div data-state-empty class="surface-soft mt-10 hidden rounded-card p-6">
+                    <p class="text-secondary">
+                        Không có dữ liệu phù hợp.
+                    </p>
+                </div>
 
-                <table class="w-full min-w-[800px] border-collapse">
 
-                    <thead>
-                        <tr class="line-theme border-b">
-                            <th class="p-4 text-left">Người tạo</th>
-                            <th class="p-4 text-left">Loại chuyến</th>
-                            <th class="p-4 text-left">Trạng thái</th>
-                            <th class="p-4 text-right">Số người</th>
-                            <th class="p-4 text-right">Ngân sách</th>
-                            <th class="p-4 text-left">Ngày khởi hành</th>
-                        </tr>
-                    </thead>
+                <!-- DATA -->
+                <div data-state-data class="mt-10 hidden overflow-x-auto">
 
-                    <tbody data-records-body>
-                    </tbody>
+                    <table class="w-full min-w-[800px] border-collapse">
 
-                </table>
+                        <thead>
+                            <tr class="line-theme border-b">
+                                <th class="p-4 text-left">Mã chuyến</th>
+                                <th class="p-4 text-left">Người tạo</th>
+                                <th class="p-4 text-left">Loại chuyến</th>
+                                <th class="p-4 text-left">Trạng thái</th>
+                                <th class="p-4 text-right">Số người</th>
+                                <th class="p-4 text-right">Ngân sách</th>
+                                <th class="p-4 text-left">Ngày khởi hành</th>
+                            </tr>
+                        </thead>
+
+                        <tbody data-records-body>
+                        </tbody>
+
+                    </table>
+
+                </div>
 
             </div>
 
@@ -141,6 +146,7 @@
 
         <tr class="line-theme border-b">
 
+            <td data-cell="id" class="p-4"></td>
             <td data-cell="traveler" class="p-4"></td>
             <td data-cell="category" class="p-4"></td>
             <td data-cell="status" class="p-4"></td>

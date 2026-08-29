@@ -39,6 +39,9 @@ export function initRecords() {
     function buildRow(record) {
         const row = template.content.firstElementChild.cloneNode(true);
 
+        row.querySelector("[data-cell='id']").textContent =
+            record.id;
+
         row.querySelector("[data-cell='traveler']").textContent =
             record.traveler;
 
